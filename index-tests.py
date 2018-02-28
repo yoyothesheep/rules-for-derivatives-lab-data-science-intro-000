@@ -20,10 +20,11 @@ class DerivativeRules(unittest.TestCase):
         self.assertEqual(derivative_at(second_terms, 2), 12)
 
     def test_tangent_line(self):
-        second_terms = [(3, 2), (-11, 0)]
-        self.assertEqual(tangent_line(second_terms, 5, line_length = 4), {'x': [1, 5, 9], 'y': [-56, 64, 184]})
         first_terms = [(4, 3), (-3, 1)]
         self.assertEqual(tangent_line(first_terms, 8, line_length = 3), {'x': [5, 8, 11], 'y': [-271, 2024, 4319]})
+        second_terms = [(3, 2), (-11, 0)]
+        self.assertEqual(tangent_line(second_terms, 5, line_length = 4), {'x': [1, 5, 9], 'y': [-56, 64, 184]})
+
 
     def test_derivative_trace(self):
         second_terms = [(3, 2), (-11, 0)]
